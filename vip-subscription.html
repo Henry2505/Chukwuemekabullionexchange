@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIP Subscription - CBE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; font-family:'Poppins',sans-serif; background:#0b0b0b; color:#f5f5f5; }
+    header { background:linear-gradient(135deg,#111,#1c1c1c); padding:80px 20px; text-align:center; }
+    header h1{font-size:42px;color:gold;margin-bottom:10px;}
+    header p{font-size:18px;color:#ccc;}
+    section{max-width:600px;margin:60px auto;padding:0 20px;}
+    form{background:#141414;padding:30px;border-radius:10px;box-shadow:0 0 10px #000;}
+    .plan-option{display:flex;align-items:center;margin-bottom:20px;padding:15px;background:#1f1f1f;border-radius:8px;cursor:pointer;transition:bg-color .3s;}
+    .plan-option:hover{background:#252525;}
+    .plan-option input{margin-right:10px;accent-color:gold;}
+    .plan-option label{font-weight:500;color:gold;font-size:16px;}
+    .glow-button{background:gold;color:#000;padding:14px;width:100%;border:none;border-radius:6px;cursor:pointer;font-size:16px;
+      box-shadow:0 0 10px #00ffcc,0 0 20px #00ffcc,0 0 30px #00ffcc;transition:box-shadow .4s ease,transform .3s;animation:pulse 2s infinite;}
+    @keyframes pulse{0%{box-shadow:0 0 10px #00ffcc,0 0 20px #00ffcc,0 0 30px #00ffcc;}50%{box-shadow:0 0 20px #00ffcc,0 0 30px #00ffcc,0 0 40px #00ffcc;}100%{box-shadow:0 0 10px #00ffcc,0 0 20px #00ffcc,0 0 30px #00ffcc;}}
+    .glow-button:hover{transform:translateY(-2px);box-shadow:0 0 20px #00ffcc,0 0 30px #00ffcc,0 0 40px #00ffcc;}
+    footer{ text-align:center; padding:20px; font-size:14px; color:#888; border-top:1px solid #222; background:#0b0b0b;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VIP Subscription</h1>
+    <p>Select a plan to continue to payment options.</p>
+  </header>
+  <section>
+    <form id="subscription-form">
+      <div class="plan-option" onclick="document.getElementById('weekly').checked=true">
+        <input type="radio" id="weekly" name="plan" value="weekly">
+        <label for="weekly">Weekly – $50</label>
+      </div>
+      <div class="plan-option" onclick="document.getElementById('monthly').checked=true">
+        <input type="radio" id="monthly" name="plan" value="monthly">
+        <label for="monthly">Monthly – $150</label>
+      </div>
+      <div class="plan-option" onclick="document.getElementById('yearly').checked=true">
+        <input type="radio" id="yearly" name="plan" value="yearly">
+        <label for="yearly">Yearly – $1,500</label>
+      </div>
+      <button type="submit" class="glow-button">Proceed to Payment</button>
+    </form>
+  </section>
+  <footer>&copy; 2025 CBE - Chukwuemeka Bullion Exchange</footer>
+  <script>
+    document.getElementById('subscription-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const sel = document.querySelector('input[name="plan"]:checked');
+      if (!sel) return alert('Select a plan.');
+      localStorage.setItem('subscriptionPlan', sel.value);
+      window.location.href = 'payment-options.html';
+    });
+    // On load, check approval before subscription
+    window.addEventListener('load', function() {
+      if (localStorage.getItem('userApproved') !== 'true') {
+        alert('Your account is not approved yet.');
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html>
