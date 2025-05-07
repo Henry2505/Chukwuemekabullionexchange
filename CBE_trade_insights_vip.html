@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIP Trade Insights - CBE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #1c1c1c);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .trade-entry {
+      background-color: #141414;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 4px solid gold;
+      border-radius: 10px;
+    }
+
+    .trade-entry h3 {
+      color: #ffd700;
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .trade-entry p {
+      font-size: 16px;
+      color: #ddd;
+      line-height: 1.7;
+    }
+
+    .trade-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 15px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .nav-button {
+      display: block;
+      background-color: #1c1c1c;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      color: gold;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background-color: #252525;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+      border-top: 1px solid #222;
+      background-color: #0b0b0b;
+    }
+  
+    .star-glow {
+      position: relative;
+      background-color: gold;
+      color: #000;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 15px 25px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px gold, 0 0 30px #ffd700, 0 0 45px #ffeb3b;
+    }
+
+    .star-glow:hover {
+      background-color: #e6c200;
+      box-shadow: 0 0 20px gold, 0 0 40px #ffd700, 0 0 60px #ffeb3b;
+    }
+
+    .star-glow::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, transparent 70%);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.8s ease, height 0.8s ease;
+      z-index: 0;
+    }
+
+    .star-glow:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .star-glow span {
+      position: relative;
+      z-index: 1;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>VIP Trade Insights</h1>
+  <p>Exclusive access to my current trades and full trading history for CBE VIP members</p>
+</header>
+
+<section>
+  <h2 style="color: gold; font-size: 28px; margin-bottom: 20px;">Current Trades</h2>
+  <div class="trade-entry">
+    <h3>My Trade: USD/JPY - May 5, 2025</h3>
+    <p>
+      Entered a long position on USD/JPY at 150.20 based on a bullish engulfing pattern at a key support level. Closed at 150.80 for a 60-pip profit. Strategy focused on momentum and risk management.
+    </p>
+    <img src="current_trades/usdjpy_20250505.jpg" alt="USD/JPY Trade Screenshot" class="trade-image">
+  </div>
+
+  <div class="trade-entry">
+    <h3>My Trade: AUD/USD - May 4, 2025</h3>
+    <p>
+      Shorted AUD/USD at 0.6750 after a rejection at a major resistance zone. Secured a 45-pip profit at 0.6705, using a scalping approach with tight stops.
+    </p>
+    <img src="current_trades/audusd_20250504.jpg" alt="AUD/USD Trade Screenshot" class="trade-image">
+  </div>
+
+  <h2 style="color: gold; font-size: 28px; margin-bottom: 20px;">Trading History</h2>
+  <a href="CBE_trade_history_vip.html" class="nav-button">Show Past Trades</a>
+</section>
+
+<footer>
+  © 2025 CBE - Chukwuemeka Bullion Exchange. All rights reserved.
+</footer>
+
+</body>
+</html>
