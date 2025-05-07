@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forex Signals - CBE</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0b0b0b, #1a1a1a);
+      color: #f5f5f5;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #1c1c1c);
+      padding: 70px 20px 50px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      font-size: 38px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .signal-box {
+      background-color: #151515;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+
+    .signal-box h2 {
+      font-size: 20px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .time {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .signal-content {
+      font-size: 16px;
+      color: #eee;
+      background-color: #1f1f1f;
+      padding: 15px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+
+    .copy-button {
+      margin-left: 10px;
+      background: #333;
+      color: #ffd700;
+      border: none;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .copy-button:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+      border-top: 1px solid #222;
+      background-color: #0b0b0b;
+    }
+
+    .notice {
+      text-align: center;
+      font-size: 16px;
+      color: #ffcc00;
+      margin-bottom: 30px;
+    }
+
+    .copy-line {
+      margin-bottom: 8px;
+    }
+  
+.admin-note {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #222;
+  border-left: 4px solid gold;
+  font-size: 14px;
+  color: #ffcc00;
+  font-style: italic;
+  border-radius: 5px;
+}
+</style>
+<style>
+.glow-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    transition: box-shadow 0.4s ease-in-out;
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+    100% {
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+}
+</style>
+<style>
+nav a {
+    padding: 8px 16px;
+    color: #00ffee;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    animation: navGlow 2s infinite alternate;
+}
+
+@keyframes navGlow {
+    0% {
+        text-shadow: 0 0 5px #00ffee, 0 0 10px #00ffee;
+    }
+    100% {
+        text-shadow: 0 0 15px #00ffee, 0 0 25px #00ffee;
+    }
+}
+</style>
+</head>
+<body>
+<video autoplay="" id="bg-video" loop="" muted="" style="position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%; z-index: -1; object-fit: cover;">
+<source src="space-stars.mp4" type="video/mp4"/>
+  Your browser does not support HTML5 video.
+</video>
+<header style="background:#000;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;">
+<div style="font-weight:bold;font-size:1.2em;">CBE</div>
+</header>
+<script>
+  const isLoggedIn = sessionStorage.getItem('cbeLoggedIn');
+  if (!isLoggedIn) {
+    alert("Access denied. Please log in to view this page.");
+    window.location.href = "login.html";
+  }
+
+  function copyToClipboard(id) {
+    const text = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Copied: ' + text);
+    });
+  }
+</script>
+<header>
+<h1>Forex Signals</h1>
+<p>Exclusive Premium Signals for CBE VIP Traders</p>
+</header>
+<main>
+<div class="notice">
+    These signals are for VIP members only. Please copy and use responsibly.
+  </div>
+<div class="signal-box">
+<h2>May 4, 2025</h2>
+<div class="time">Time: 10:15 AM</div>
+<div class="signal-content">
+<div class="copy-line">BUY EUR/USD @ <span id="price1">1.07250</span> <button class="copy-button glow-button" onclick="copyToClipboard('price1')">Copy</button></div>
+<div class="copy-line">TP: <span id="tp1">1.07700</span> <button class="copy-button glow-button" onclick="copyToClipboard('tp1')">Copy</button></div>
+<div class="copy-line">SL: <span id="sl1">1.06950</span> <button class="copy-button glow-button" onclick="copyToClipboard('sl1')">Copy</button></div>
+</div>
+<div class="admin-note">Note: Trade at your own risk.</div></div>
+<div class="signal-box">
+<h2>May 4, 2025</h2>
+<div class="time">Time: 11:30 AM</div>
+<div class="signal-content">
+<div class="copy-line">SELL GBP/JPY @ <span id="price2">193.250</span> <button class="copy-button glow-button" onclick="copyToClipboard('price2')">Copy</button></div>
+<div class="copy-line">TP: <span id="tp2">192.600</span> <button class="copy-button glow-button" onclick="copyToClipboard('tp2')">Copy</button></div>
+<div class="copy-line">SL: <span id="sl2">193.800</span> <button class="copy-button glow-button" onclick="copyToClipboard('sl2')">Copy</button></div>
+</div>
+<div class="admin-note">Note: Trade at your own risk.</div></div>
+</main>
+<footer>
+  © 2025 CBE - Chukwuemeka Bullion Exchange. All rights reserved.
+</footer>
+</body>
+</html>
